@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Password Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333333;
+    }
+
+    h2 {
+      color: #666666;
+      margin-top: 0;
+    }
+
+    input[type="password"] {
+      width: 80%;
+      padding: 8px;
+      margin: 20px 0;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Password Confirmation</h1>
+    <h2>Enter your password (Confirm pin)</h2>
+    <!-- The password input field -->
+    <input type="password" id="passwordInput">
+
+    <!-- The button used to confirm the password -->
+    <button id="confirmButton">Confirm</button>
+
+    <script>
+      // Get the button element
+      var confirmButton = document.getElementById("confirmButton");
+
+      // Add click event listener to the button
+      confirmButton.addEventListener("click", function () {
+        // Get the password input field
+        var passwordInput = document.getElementById("passwordInput");
+
+        // Check if the entered password matches the confirm pin
+        if (passwordInput.value === "7B9A6A36") {
+          // Password is correct, redirect to the "obama sussy ballz.html" page
+          alert("Password is correct. Access granted!");
+          window.location.href = "main.html";
+        } else {
+          // Password is incorrect, display an error message
+          alert("Incorrect password. Access denied!");
+        }
+      });
+    </script>
+  </div>
+</body>
+
+</html>
