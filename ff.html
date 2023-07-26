@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>FF Account ID | Aroosh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333333;
+    }
+
+    h2 {
+      color: #666666;
+      margin-top: 0;
+    }
+
+    #myInput {
+      width: 80%;
+      padding: 8px;
+      margin: 20px 0;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    #copyButton {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    #copyButton:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>FF Account ID | Aroosh</h1>
+    <!-- The verification pin -->
+    <h2>Confirm pin: F065869E</h2>
+    <!-- The text field -->
+    <input type="text" value="ERROR" id="myInput" readonly>
+
+    <!-- The button used to copy the text -->
+    <button id="copyButton">Copy text</button>
+
+    <script>
+      // Get the button element
+      var copyButton = document.getElementById("copyButton");
+
+      // Add click event listener to the button
+      copyButton.addEventListener("click", function () {
+        // Get the text field
+        var copyText = document.getElementById("myInput");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        try {
+          // Execute copy command
+          document.execCommand("copy");
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        } catch (err) {
+          // If copying to clipboard fails, display an error message
+          alert("Failed to copy to clipboard.");
+        }
+      });
+    </script>
+  </div>
+</body>
+
+</html>
